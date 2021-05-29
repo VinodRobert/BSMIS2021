@@ -1,0 +1,572 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9A7C6D32-A886-4EAA-A161-D3F68891AA97}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BSMIS</RootNamespace>
+    <AssemblyName>BSMIS</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.C1Excel.2, Version=2.1.20122.234, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1FlexGrid.2, Version=2.6.20122.701, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1List.2, Version=2.1.20122.204, Culture=neutral, PublicKeyToken=6b24f8f981dbd7bc, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1SplitContainer.2, Version=2.0.20122.20, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1TrueDBGrid.2, Version=2.0.20122.61260, Culture=neutral, PublicKeyToken=75ae3fb0e2b1e0da, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="EPPlus, Version=4.1.0.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Users\VINOD ROBERT\Downloads\EPPlus 4.1 (2)\DotNet35\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Syncfusion.Core, Version=9.403.0.62, Culture=neutral, PublicKeyToken=632609b4d040f6b4" />
+    <Reference Include="Syncfusion.Grid.Base, Version=9.403.0.62, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Grid.Grouping.Base, Version=9.403.0.62, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Grid.Grouping.Windows, Version=9.403.0.62, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Grid.Windows, Version=9.403.0.62, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.GridHelperClasses.Windows, Version=9.403.0.62, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>O:\Program Files\Syncfusion\Essential Studio\9.4.0.62\Assemblies\3.5\Syncfusion.GridHelperClasses.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Grouping.Base, Version=9.403.0.62, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Shared.Base, Version=9.403.0.62, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Shared.Windows, Version=9.403.0.62, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Tools.Base, Version=9.403.0.62, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Tools.Windows, Version=9.403.0.62, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business Layer\Budget\Budget.cs" />
+    <Compile Include="Business Layer\GST\GST.cs" />
+    <Compile Include="Business Layer\STORES\Stores.cs" />
+    <Compile Include="Business Layer\Assets\Assets.cs" />
+    <Compile Include="Business Layer\Accounts\CreditorAge.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business Layer\Accounts\Entities.cs" />
+    <Compile Include="Business Layer\Accounts\GlobalVariables.cs" />
+    <Compile Include="Business Layer\Accounts\PivotTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Business Layer\IT\IT.cs" />
+    <Compile Include="Data Layer\ImportProperty.cs" />
+    <Compile Include="Data Layer\QueryString.cs" />
+    <Compile Include="Data Layer\SQLHelper.cs" />
+    <Compile Include="Data Layer\UtilityFunctions.cs" />
+    <Compile Include="DataSets\MIS.cs">
+      <DependentUpon>MIS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSets\MIS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MIS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportMasterLedger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportMasterLedger.Designer.cs">
+      <DependentUpon>frmReportMasterLedger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\Accounts\frmMastersLedger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\Accounts\frmMastersLedger.Designer.cs">
+      <DependentUpon>frmMastersLedger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\Accounts\frmCreditorAge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\Accounts\frmCreditorAge.Designer.cs">
+      <DependentUpon>frmCreditorAge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\Accounts\frmOrgXTab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\Accounts\frmOrgXTab.Designer.cs">
+      <DependentUpon>frmOrgXTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\Accounts\frmDumps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\Accounts\frmDumps.Designer.cs">
+      <DependentUpon>frmDumps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\Accounts\frmDebtorRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\Accounts\frmDebtorRegister.Designer.cs">
+      <DependentUpon>frmDebtorRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\Accounts\frmSubContractorRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\Accounts\frmSubContractorRegister.Designer.cs">
+      <DependentUpon>frmSubContractorRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\Accounts\frmCreditors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\Accounts\frmCreditors.Designer.cs">
+      <DependentUpon>frmCreditors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\Accounts\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\Accounts\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\Accounts\frmPurchaseRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\Accounts\frmPurchaseRegister.Designer.cs">
+      <DependentUpon>frmPurchaseRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\Accounts\frmOpenDebtRecons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\Accounts\frmOpenDebtRecons.Designer.cs">
+      <DependentUpon>frmOpenDebtRecons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\ASSETS\frmAssetYearEnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\ASSETS\frmAssetYearEnd.Designer.cs">
+      <DependentUpon>frmAssetYearEnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\ASSETS\frmTransferAssets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\ASSETS\frmTransferAssets.Designer.cs">
+      <DependentUpon>frmTransferAssets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\ASSETS\frmDepSummaryReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\ASSETS\frmDepSummaryReport.Designer.cs">
+      <DependentUpon>frmDepSummaryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\ASSETS\frmAssetLocations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\ASSETS\frmAssetLocations.Designer.cs">
+      <DependentUpon>frmAssetLocations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\ASSETS\frmAssetSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\ASSETS\frmAssetSale.Designer.cs">
+      <DependentUpon>frmAssetSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\ASSETS\frmManualDepreciation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\ASSETS\frmManualDepreciation.Designer.cs">
+      <DependentUpon>frmManualDepreciation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\ASSETS\frmPostDepreciation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\ASSETS\frmPostDepreciation.Designer.cs">
+      <DependentUpon>frmPostDepreciation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\ASSETS\frmDepreciationReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\ASSETS\frmDepreciationReport.Designer.cs">
+      <DependentUpon>frmDepreciationReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\ASSETS\frmEditAsset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\ASSETS\frmEditAsset.Designer.cs">
+      <DependentUpon>frmEditAsset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\ASSETS\frmAssetMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\ASSETS\frmAssetMaster.Designer.cs">
+      <DependentUpon>frmAssetMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\ASSETS\frmNewAsset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\ASSETS\frmNewAsset.Designer.cs">
+      <DependentUpon>frmNewAsset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\Budget\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\Budget\Form1.designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\Budget\frmUploadBudget.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\Budget\frmUploadBudget.Designer.cs">
+      <DependentUpon>frmUploadBudget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\EANDY\frmExpenseIncomeValues.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\EANDY\frmExpenseIncomeValues.designer.cs">
+      <DependentUpon>frmExpenseIncomeValues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\EANDY\frmDefineExpenseHeads.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\EANDY\frmDefineExpenseHeads.Designer.cs">
+      <DependentUpon>frmDefineExpenseHeads.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\EANDY\frmLedgerValues.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\EANDY\frmLedgerValues.Designer.cs">
+      <DependentUpon>frmLedgerValues.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Presentation Layer\EANDY\frmExpenseIncomeWithSubLedgers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\EANDY\frmExpenseIncomeWithSubLedgers.Designer.cs">
+      <DependentUpon>frmExpenseIncomeWithSubLedgers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\GST\frmGSTSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\GST\frmGSTSales.Designer.cs">
+      <DependentUpon>frmGSTSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\GST\frmBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\GST\frmBatch.Designer.cs">
+      <DependentUpon>frmBatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\GST\frmGSTPurchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\GST\frmGSTPurchase.Designer.cs">
+      <DependentUpon>frmGSTPurchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\IT\ExcelExample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\IT\ExcelExample.Designer.cs">
+      <DependentUpon>ExcelExample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\IT\frmLockUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\IT\frmLockUsers.Designer.cs">
+      <DependentUpon>frmLockUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\IT\frmLoginUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\IT\frmLoginUser.Designer.cs">
+      <DependentUpon>frmLoginUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\STORES\frmGRNRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\STORES\frmGRNRegister.Designer.cs">
+      <DependentUpon>frmGRNRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\STORES\frmPurchaseHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\STORES\frmPurchaseHistory.Designer.cs">
+      <DependentUpon>frmPurchaseHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\STORES\frmStockAging.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\STORES\frmStockAging.Designer.cs">
+      <DependentUpon>frmStockAging.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\STORES\frmReceiptIssue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\STORES\frmReceiptIssue.Designer.cs">
+      <DependentUpon>frmReceiptIssue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\STORES\frmPRRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\STORES\frmPRRegister.Designer.cs">
+      <DependentUpon>frmPRRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\STORES\frmPORegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\STORES\frmPORegister.Designer.cs">
+      <DependentUpon>frmPORegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\UTILITY\frmListOfUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\UTILITY\frmListOfUsers.Designer.cs">
+      <DependentUpon>frmListOfUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rptMasterLedger.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMasterLedger.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportMasterLedger.resx">
+      <DependentUpon>frmReportMasterLedger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\Accounts\frmCreditorAge.resx">
+      <DependentUpon>frmCreditorAge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\Accounts\frmMastersLedger.resx">
+      <DependentUpon>frmMastersLedger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\Accounts\frmOrgXTab.resx">
+      <DependentUpon>frmOrgXTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\Accounts\frmDumps.resx">
+      <DependentUpon>frmDumps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\Accounts\frmDebtorRegister.resx">
+      <DependentUpon>frmDebtorRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\Accounts\frmSubContractorRegister.resx">
+      <DependentUpon>frmSubContractorRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\Accounts\frmCreditors.resx">
+      <DependentUpon>frmCreditors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\Accounts\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\Accounts\frmPurchaseRegister.resx">
+      <DependentUpon>frmPurchaseRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\Accounts\frmOpenDebtRecons.resx">
+      <DependentUpon>frmOpenDebtRecons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\ASSETS\frmAssetYearEnd.resx">
+      <DependentUpon>frmAssetYearEnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\ASSETS\frmTransferAssets.resx">
+      <DependentUpon>frmTransferAssets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\ASSETS\frmDepSummaryReport.resx">
+      <DependentUpon>frmDepSummaryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\ASSETS\frmAssetLocations.resx">
+      <DependentUpon>frmAssetLocations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\ASSETS\frmAssetSale.resx">
+      <DependentUpon>frmAssetSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\ASSETS\frmManualDepreciation.resx">
+      <DependentUpon>frmManualDepreciation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\ASSETS\frmPostDepreciation.resx">
+      <DependentUpon>frmPostDepreciation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\ASSETS\frmDepreciationReport.resx">
+      <DependentUpon>frmDepreciationReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\ASSETS\frmEditAsset.resx">
+      <DependentUpon>frmEditAsset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\ASSETS\frmAssetMaster.resx">
+      <DependentUpon>frmAssetMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\ASSETS\frmNewAsset.resx">
+      <DependentUpon>frmNewAsset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\Budget\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\Budget\frmUploadBudget.resx">
+      <DependentUpon>frmUploadBudget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\EANDY\frmExpenseIncomeValues.resx">
+      <DependentUpon>frmExpenseIncomeValues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\EANDY\frmDefineExpenseHeads.resx">
+      <DependentUpon>frmDefineExpenseHeads.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\EANDY\frmLedgerValues.resx">
+      <DependentUpon>frmLedgerValues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\EANDY\frmExpenseIncomeWithSubLedgers.resx">
+      <DependentUpon>frmExpenseIncomeWithSubLedgers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\GST\frmGSTSales.resx">
+      <DependentUpon>frmGSTSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\GST\frmBatch.resx">
+      <DependentUpon>frmBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\GST\frmGSTPurchase.resx">
+      <DependentUpon>frmGSTPurchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\IT\ExcelExample.resx">
+      <DependentUpon>ExcelExample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\IT\frmLockUsers.resx">
+      <DependentUpon>frmLockUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\IT\frmLoginUser.resx">
+      <DependentUpon>frmLoginUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\STORES\frmGRNRegister.resx">
+      <DependentUpon>frmGRNRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\STORES\frmPurchaseHistory.resx">
+      <DependentUpon>frmPurchaseHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\STORES\frmStockAging.resx">
+      <DependentUpon>frmStockAging.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\STORES\frmReceiptIssue.resx">
+      <DependentUpon>frmReceiptIssue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\STORES\frmPRRegister.resx">
+      <DependentUpon>frmPRRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\STORES\frmPORegister.resx">
+      <DependentUpon>frmPORegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\UTILITY\frmListOfUsers.resx">
+      <DependentUpon>frmListOfUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="rptMasterLedger.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMasterLedger.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="DataSets\MIS.xsc">
+      <DependentUpon>MIS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\MIS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MIS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\MIS.xss">
+      <DependentUpon>MIS.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxCrystal">
+      <Guid>{00025600-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>2</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Crystal">
+      <Guid>{00025600-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>2</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reports\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

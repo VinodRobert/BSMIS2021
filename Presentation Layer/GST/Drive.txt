@@ -1,0 +1,20 @@
+System.Diagnostics.Process.Start("net.exe", "use K: \\Server\URI\\path\\here");
+
+
+
+// Map Network drive
+System.Diagnostics.Process process = new System.Diagnostics.Process();
+System.Diagnostics.ProcessStartInfo psi = new System.Diagnostics.ProcessStartInfo();
+
+// Notes:
+//      Use /C To carry out the command specified by string and then terminates
+//      You can omit the passord or username and password
+//      Use /PERSISTENT:YES to keep the mapping when the machine is restarted
+psi.FileName      = "cmd.exe";
+psi.Arguments     = @"/C net use X: \\MyServer\Folder01  /USER:MyDomain\MyUsername MyPassword /PERSISTENT:YES";
+psi.WindowStyle   = System.Diagnostics.ProcessWindowStyle.Normal;
+process.StartInfo = psi;
+
+process.Start();
+
+

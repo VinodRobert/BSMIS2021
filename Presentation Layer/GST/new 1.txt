@@ -1,0 +1,16 @@
+  string  row =Convert.ToString(e.Inner.RowIndex);
+            string cellValue = "";
+            Int64 _tranGrp;
+            var s = this.gridRegister.Table.SelectedRecords;
+            GridRangeInfoList s1 = this.gridRegister.TableModel.Selections.GetSelectedRows(true, true);
+            foreach (GridRangeInfo info in s1)
+            {
+
+                Element el = this.gridRegister.TableModel.GetDisplayElementAt(info.Top);
+
+                cellValue = el.GetRecord().GetValue("TRANGRP").ToString();       
+
+            }
+            _tranGrp = Convert.ToInt64(cellValue);
+            frmBatch _frmBatch = new frmBatch(_tranGrp);
+            _frmBatch.Show();
